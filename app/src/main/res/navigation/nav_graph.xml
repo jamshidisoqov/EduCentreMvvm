@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.gita.edu_centre_mvvm.ui.splash.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_courseListFragment"
+            app:destination="@id/courseListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseListFragment"
+        android:name="uz.gita.edu_centre_mvvm.ui.courses.CourseListFragment"
+        android:label="fragment_course_list"
+        tools:layout="@layout/fragment_course_list" >
+        <action
+            android:id="@+id/action_courseListFragment_to_addCourseFragment"
+            app:destination="@id/addCourseFragment" />
+        <action
+            android:id="@+id/action_courseListFragment_to_editCourseFragment"
+            app:destination="@id/editCourseFragment" />
+        <action
+            android:id="@+id/action_courseListFragment_to_groupListFragment"
+            app:destination="@id/groupListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCourseFragment"
+        android:name="uz.gita.edu_centre_mvvm.ui.courses.add.AddCourseFragment"
+        android:label="fragment_add_course"
+        tools:layout="@layout/fragment_add_course" />
+    <fragment
+        android:id="@+id/editCourseFragment"
+        android:name="uz.gita.edu_centre_mvvm.ui.courses.edit.EditCourseFragment"
+        android:label="fragment_edit_course"
+        tools:layout="@layout/fragment_edit_course" >
+        <argument
+            android:name="CourseData"
+            app:argType="uz.gita.edu_centre_mvvm.data.models.CourseData" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupListFragment"
+        android:name="uz.gita.edu_centre_mvvm.ui.groups.GroupListFragment"
+        android:label="fragment_group_list"
+        tools:layout="@layout/fragment_group_list" >
+        <action
+            android:id="@+id/action_groupListFragment_to_addGroupFragment"
+            app:destination="@id/addGroupFragment" />
+        <action
+            android:id="@+id/action_groupListFragment_to_editGroupFragment"
+            app:destination="@id/editGroupFragment" />
+        <argument
+            android:name="CourseData"
+            app:argType="uz.gita.edu_centre_mvvm.data.models.CourseData" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGroupFragment"
+        android:name="uz.gita.edu_centre_mvvm.ui.groups.add.AddGroupFragment"
+        android:label="fragment_add_group"
+        tools:layout="@layout/fragment_add_group" >
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/editGroupFragment"
+        android:name="uz.gita.edu_centre_mvvm.ui.groups.edit.EditGroupFragment"
+        android:label="fragment_edit_group"
+        tools:layout="@layout/fragment_edit_group" >
+        <argument
+            android:name="GroupData"
+            app:argType="uz.gita.edu_centre_mvvm.data.room.entity.GroupEntity" />
+    </fragment>
+</navigation>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Edu Centre Mvvm</string>
+    <string name="gita_dasturchilar_akademiyasi">GITA Dasturchilar\nAkademiyasi</string>
+    <string name="courses">Kurslar</string>
+    <string name="courses_add">Kurs qo\'shish</string>
+    <string name="kurs_nomi">Kurs nomi</string>
+    <string name="courses_edit">Kursni o\'zgartirish</string>
+    <string name="groups_add">Guruh qo\'shish</string>
+    <string name="group_name">Guruh nomi</string>
+    <string name="mentor_name">Mentor ismi</string>
+    <string name="groups_edit">Guruhni o\'zgartirish</string>
+</resources>
